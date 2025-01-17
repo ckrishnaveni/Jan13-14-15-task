@@ -31,25 +31,15 @@ isLeapyear();
 alert(leapYearResult);
 
 // factorial
-let factNum = prompt("Enter a No. to check the factorial");
-let factorialresult;
-function factorial() {
-    factNum = parseInt(factNum)
-    if (factNum === 0) {
-        factorialresult = 1;
-    }
-    else if (factNum < 0) {
-        factorialresult = "Factorial is not defined for negative numbers"
-    }
-    else {
-        factorialresult=factNum;
-        for (let i = factNum-1; i > 0; i--) {
-            factorialresult *= i;
-        }
+let factorial = prompt("enter no to know the factorial");
+let factresult=1;
+function factorialFunction() {
+    for (i = 1; i <= factorial; i++) {
+        factresult *= i;
     }
 }
-factorial();
-alert(factorialresult)
+factorialFunction()
+console.log(factresult)
 
 // even no's
 let enternum = prompt("Enter a number to get even numbers");
@@ -90,7 +80,11 @@ alert(`Hello, ${user}!`)
 
 // Remove vowels from a string
 let inputStr=prompt("Enter text to remove vowels");
-let resultstr=inputStr.replace(/[aeiouAEIOU]/g,'');
+let resultStr;
+function removeVowels(){
+    resultStr=inputStr.replace(/[aeiouAEIOU]/gi,'')
+}
+// let resultstr=inputStr.replace(/[aeiouAEIOU]/g,'');
 alert("String after removing vowels: " + resultstr);
 
 // sum of digits in a number
